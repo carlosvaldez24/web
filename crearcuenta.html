@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Crear Cuenta</title>
+  
+  <!-- Font Awesome para el ojito -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/crearcuenta.css">
+</head>
+<body>
+
+  <!-- Sección del logo -->
+  <section class="logo-section">
+    <img src="logos/infinity books.jpg" alt="Logo de la página">
+  </section>
+
+  <div class="center">
+    <h1>Crear Cuenta</h1>
+
+    <form action="registro.php" method="POST">
+      <div class="txt_field">
+        <input type="text" name="nombre" required>
+        <span></span>
+        <label>Nombre</label>
+      </div>
+
+      <div class="txt_field">
+        <input type="email" name="correo" required>
+        <span></span>
+        <label>Correo Electrónico</label>
+      </div>
+
+      <div class="txt_field">
+        <input type="number" name="edad" required>
+        <span></span>
+        <label>Edad</label>
+      </div>
+
+      <div class="txt_field">
+        <select name="sexo" required>
+          <option value="" disabled selected hidden></option>
+          <option value="Femenino">Femenino</option>
+          <option value="Masculino">Masculino</option>
+          <option value="Otro">Otro</option>
+          <option value="Prefiero no decirlo">Prefiero no decirlo</option>
+        </select>
+        <span></span>
+        <label>Sexo</label>
+      </div>
+
+      <div class="txt_field">
+        <input type="password" id="password" name="contraseña" required>
+        <span></span>
+        <label>Contraseña</label>
+        <button type="button" class="toggle-password" onclick="togglePassword()">
+          <i id="eyeIcon" class="fas fa-eye-slash"></i>
+        </button>
+      </div>
+
+      <input type="submit" value="Registrarse">
+
+      <div class="signup_link">
+        ¿Ya tienes una cuenta? <a href="iniciar_sesion.html">Inicia sesión</a>
+      </div>
+    </form>
+  </div>
+
+  <!-- Script del ojito -->
+  <script>
+    function togglePassword() {
+      const passwordInput = document.getElementById("password");
+      const eyeIcon = document.getElementById("eyeIcon");
+      if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        eyeIcon.classList.remove("fa-eye-slash");
+        eyeIcon.classList.add("fa-eye");
+      } else {
+        passwordInput.type = "password";
+        eyeIcon.classList.remove("fa-eye");
+        eyeIcon.classList.add("fa-eye-slash");
+      }
+    }
+  </script>
+
+</body>
+</html>

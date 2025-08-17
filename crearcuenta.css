@@ -1,0 +1,204 @@
+/* === RESET === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* BODY */
+body {
+  background-color: #000;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* LOGO */
+img {
+  display: block;
+  margin: 20px auto 10px auto;
+  max-width: 50%;
+  height: auto;
+}
+
+/* FORMULARIO */
+.center {
+  background-color: #000;
+  border-radius: 15px;
+  padding: 40px 30px;
+  width: 400px;
+  max-width: 95%;
+  box-shadow: 0 0 200px rgba(255, 255, 255, 0.2);
+  margin-top: 20px;
+  position: relative;
+}
+
+.center h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+/* CAMPOS */
+.txt_field {
+  position: relative;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #ccc;
+}
+
+.txt_field input,
+.txt_field select {
+  width: 100%;
+  padding: 15px 5px;
+  font-size: 18px;
+  border: none;
+  background: none;
+  color: #fff;
+  outline: none;
+  appearance: none;
+}
+
+.txt_field label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: #aaa;
+  transform: translateY(-50%);
+  transition: 0.3s ease;
+  pointer-events: none;
+}
+
+.txt_field span::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #999;
+  transition: 0.4s;
+}
+
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label,
+.txt_field select:focus ~ label,
+.txt_field select:valid ~ label {
+  top: -10px;
+  font-size: 14px;
+  color: #fff;
+}
+
+.txt_field input:focus ~ span::before,
+.txt_field input:valid ~ span::before,
+.txt_field select:focus ~ span::before,
+.txt_field select:valid ~ span::before {
+  width: 100%;
+}
+
+/* BOTÓN */
+input[type="submit"] {
+  width: 100%;
+  height: 50px;
+  background: #444;
+  border: none;
+  font-size: 18px;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background: #666;
+}
+
+/* LINKS */
+.signup_link {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.signup_link a {
+  color: #ccc;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.signup_link a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* TOGGLE PASSWORD */
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #aaa;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 10;
+}
+.toggle-password:focus {
+  outline: none;
+}
+
+/* -------------------------
+   RESPONSIVE
+--------------------------*/
+
+/* TABLETS */
+@media (max-width: 768px) {
+  img {
+    width: 95%;
+  }
+  .center {
+    width: 100%;
+    padding: 60px 35px;
+  }
+  .center h1 {
+    font-size: 2.5rem;
+  }
+  input[type="submit"] {
+    font-size: 20px;
+    height: 60px;
+  }
+  .txt_field input,
+  .txt_field select {
+    font-size: 20px;
+    padding: 18px 12px;
+  }
+}
+
+/* CELULARES */
+@media (max-width: 480px) {
+  img {
+    width: 100%;
+  }
+  .center {
+    width: 95%;
+    padding: 60px 30px;
+    border-radius: 10px;
+  }
+  .center h1 {
+    font-size: 2.5rem;
+  }
+  input[type="submit"] {
+    font-size: 21px;
+    height: 65px;
+  }
+  .txt_field input,
+  .txt_field select {
+    font-size: 20px;
+    padding: 18px 12px;
+  }
+}

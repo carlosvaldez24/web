@@ -1,0 +1,213 @@
+/* Carrusel */
+.slider-container {
+  margin-top: 80px;
+  position: relative;
+  width: 75vw;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 45vh;
+  max-height: 400px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+  height: 100%; /* Para que tome el alto del contenedor */
+}
+
+.slider-track img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+  padding: 0 5px;
+  border-radius: 15px;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 30px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.slider-btn.left {
+  left: 10px;
+}
+
+.slider-btn.right {
+  right: 10px;
+}
+
+/* Sección de libros estilo Netflix */
+.seccion-libros {
+  padding: 40px 20px;
+  background-color: black;
+  color: white;
+  margin-top: 5%;
+}
+
+.seccion-libros h2 {
+  font-size: 24px;
+  margin-left: 10px;
+  margin-bottom: 15px;
+  border-left: 5px solid white;
+  padding-left: 10px;
+}
+
+.libros-carrusel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.contenedor-libros {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 15px;
+  padding: 10px 0;
+  scrollbar-width: none;
+}
+
+.contenedor-libros::-webkit-scrollbar {
+  display: none;
+}
+
+.libro {
+  flex: 0 0 auto;
+  width: 140px;
+  text-align: center;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.libro img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+.libro p {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.libro:hover {
+  transform: scale(1.05);
+}
+
+.flecha {
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 2;
+}
+
+.izquierda {
+  position: absolute;
+  left: 0;
+}
+
+.derecha {
+  position: absolute;
+  right: 0;
+}
+
+/* Responsive: Laptops pequeñas */
+@media (max-width: 1280px) {
+  .slider-container {
+    width: 80vw;
+    height: 42vh;
+    max-height: 380px;
+  }
+}
+
+/* Responsive: Tablets horizontales */
+@media (max-width: 1024px) {
+  .slider-container {
+    width: 85vw;
+    height: 40vh;
+    max-height: 350px;
+    border-radius: 15px;
+  }
+}
+
+/* Responsive: Tablets verticales */
+@media (max-width: 768px) {
+  .slider-container {
+    width: 90vw;
+    height: 36vh;
+    max-height: 300px;
+    border-radius: 12px;
+  }
+}
+
+/* Responsive: Celulares grandes */
+@media (max-width: 600px) {
+  .slider-container {
+    width: 95vw;
+    height: 30vh;
+    max-height: 250px;
+    border-radius: 12px;
+  }
+}
+
+/* Responsive: Celulares pequeños */
+@media (max-width: 400px) {
+  .slider-container {
+    width: 96vw;
+    height: 28vh;
+    max-height: 220px;
+    border-radius: 10px;
+  }
+
+  .slider-btn {
+    font-size: 20px;
+    padding: 6px;
+  }
+
+  .seccion-libros {
+    padding: 20px 10px;
+  }
+
+  .libro {
+    width: 110px;
+  }
+
+  .libro img {
+    height: 170px;
+  }
+}
+
+/* ====== AJUSTE PRECISO PARA QUE EL HEADER NO TAPE EL CARRUSEL ====== */
+@media (max-width: 480px) {
+  .slider-container {
+    margin-top: 115px; /* Justo debajo del header en móviles */
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .slider-container {
+    margin-top: 105px; /* Justo debajo del header en tablets */
+  }
+}

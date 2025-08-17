@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Formulario de Inicio de Sesión</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/iniciodesesion.css">
+</head>
+<body>
+
+  <section>
+    <img src="logos/infinity books.jpg" alt="Logo o imagen decorativa"> 
+  </section>
+
+  <div class="center">
+    <h1>Acceder</h1>
+
+    <form action="login.php" method="post"> 
+      <div class="txt_field">
+        <input type="email" name="correo" required>
+        <span></span>
+        <label>Correo Elecrónico</label>
+      </div>
+      
+      <div class="txt_field">
+        <input type="password" id="password" name="contraseña" required>
+        <span></span>
+        <label>Contraseña</label>
+        <button type="button" class="toggle-password" onclick="togglePassword()">
+          <i id="eyeIcon" class="fas fa-eye-slash"></i>
+        </button>
+      </div>
+      
+      <input type="submit" value="ACCEDER">
+
+      <div class="pass">
+        <a href="#">¿Olvidaste tu contraseña?</a>
+      </div>
+      
+      <div class="signup_link">
+        ¿No tienes cuenta? <a href="crearcuenta.html">Crear una</a>
+      </div>
+    </form>
+  </div>
+
+<script src="js/iniciarsesion.js"></script>
+</body>
+</html>
