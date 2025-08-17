@@ -1,259 +1,274 @@
+/* ===== RESETEO GLOBAL ===== */
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  box-sizing: border-box; /* Incluye padding y border dentro del ancho y alto */
+  margin: 0;              /* Elimina márgenes por defecto */
+  padding: 0;             /* Elimina padding por defecto */
 }
 
+/* ===== ESTILO GENERAL DEL BODY ===== */
 body {
-  background-color: #000000;
-  font-family: 'Liga Espartana', sans-serif;
-  overflow-x: hidden;
+  background-color: #000000;            /* Fondo negro */
+  font-family: 'Liga Espartana', sans-serif; /* Fuente principal */
+  overflow-x: hidden;                   /* Evita scroll horizontal */
 }
 
-/* Encabezado */
+/* ===== ENCABEZADO ===== */
 .header {
-  background-color: #000000;
-  padding: 15px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
+  background-color: #000000;            /* Fondo negro del header */
+  padding: 15px 20px;                   /* Espaciado interno */
+  display: flex;                        /* Usar flexbox */
+  justify-content: space-between;       /* Separar elementos a los extremos */
+  align-items: center;                  /* Alinear verticalmente al centro */
+  position: fixed;                      /* Fijo en la parte superior */
+  width: 100%;                          /* Ancho completo */
+  top: 0;                               /* Posición desde arriba */
+  z-index: 1000;                        /* Prioridad sobre otros elementos */
 }
 
-/* Línea blanca debajo del header */
+/* ===== LÍNEA BLANCA DEBAJO DEL HEADER ===== */
 .linea-blanca {
-  height: 2px;
-  background-color: white;
-  width: 100%;
-  margin-top: 107px;
-  position: relative;
+  height: 2px;                          /* Grosor de la línea */
+  background-color: white;              /* Color de la línea */
+  width: 100%;                           /* Ancho completo */
+  margin-top: 107px;                     /* Separación del header */
+  position: relative;                    /* Posicionamiento relativo */
 }
 
+/* ===== SECCIÓN IZQUIERDA DEL HEADER ===== */
 .left-header {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+  display: flex;                        /* Usar flexbox */
+  align-items: center;                  /* Alinear verticalmente */
+  gap: 20px;                            /* Espacio entre elementos */
 }
 
-/* Logo */
+/* ===== LOGO ===== */
 .logo {
-  max-width: 150px;
-  height: auto;
-  border-radius: 10px;
+  max-width: 150px;                      /* Ancho máximo */
+  height: auto;                          /* Altura automática */
+  border-radius: 10px;                   /* Bordes redondeados */
 }
 
-/* Dropdown categorías */
+/* ===== DROPDOWN DE CATEGORÍAS ===== */
 .dropdown {
-  position: relative;
+  position: relative;                    /* Para posicionar contenido absoluto */
 }
 
+/* ===== BOTÓN DEL DROPDOWN ===== */
 .dropbtn {
-  background-color: #000;
-  color: white;
-  padding: 10px 20px;
-  border: 2px solid white;
-  border-radius: 20px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
+  background-color: #000;                /* Fondo negro */
+  color: white;                          /* Texto blanco */
+  padding: 10px 20px;                    /* Espaciado interno */
+  border: 2px solid white;               /* Borde blanco */
+  border-radius: 20px;                   /* Bordes redondeados */
+  cursor: pointer;                       /* Cursor tipo pointer */
+  font-weight: bold;                      /* Texto en negrita */
+  transition: background-color 0.3s ease; /* Transición suave */
 }
 
+/* ===== HOVER DEL BOTÓN ===== */
 .dropbtn:hover {
-  background-color: white;
-  color: black;
+  background-color: white;               /* Fondo blanco al pasar el cursor */
+  color: black;                          /* Texto negro al pasar el cursor */
 }
 
+/* ===== CONTENIDO DEL DROPDOWN ===== */
 .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #222;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px rgba(255, 255, 255, 0.2);
-  z-index: 1;
-  border-radius: 8px;
-  top: 45px;
+  display: none;                         /* Oculto por defecto */
+  position: absolute;                    /* Posicionamiento absoluto */
+  background-color: #222;                /* Fondo gris oscuro */
+  min-width: 160px;                      /* Ancho mínimo */
+  box-shadow: 0px 8px 16px rgba(255, 255, 255, 0.2); /* Sombra */
+  z-index: 1;                            /* Prioridad */
+  border-radius: 8px;                    /* Bordes redondeados */
+  top: 45px;                             /* Posición desde el botón */
 }
 
+/* ===== ENLACES DEL DROPDOWN ===== */
 .dropdown-content a {
-  color: white;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
+  color: white;                          /* Texto blanco */
+  padding: 12px 16px;                    /* Espaciado interno */
+  text-decoration: none;                 /* Sin subrayado */
+  display: block;                        /* Ocupa toda la línea */
 }
 
+/* ===== HOVER DE LOS ENLACES ===== */
 .dropdown-content a:hover {
-  background-color: #555;
+  background-color: #555;                /* Fondo gris al pasar cursor */
 }
 
+/* ===== MOSTRAR DROPDOWN AL HOVER ===== */
 .dropdown:hover .dropdown-content {
-  display: block;
+  display: block;                        /* Se muestra el contenido */
 }
 
-/* Buscador */
+/* ===== SECCIÓN DERECHA DEL HEADER ===== */
 .right-header {
-  flex-grow: 1;
-  display: flex;
-  justify-content: flex-end;
+  flex-grow: 1;                          /* Ocupa espacio restante */
+  display: flex;                         /* Usar flexbox */
+  justify-content: flex-end;             /* Alineación derecha */
 }
 
+/* ===== BUSCADOR ===== */
 .search-container {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  max-width: 400px;
+  display: flex;                         /* Usar flexbox */
+  align-items: center;                   /* Alinear verticalmente */
+  width: 100%;                            /* Ancho completo */
+  max-width: 400px;                       /* Ancho máximo */
 }
 
+/* ===== INPUT DE BÚSQUEDA ===== */
 #searchInput {
-  padding: 10px 15px;
-  margin-left: -120%;
-  border: none;
-  border-radius: 20px 0 0 20px;
-  font-size: 16px;
-  width: 100%;
-  outline: none;
+  padding: 10px 15px;                     /* Espaciado interno */
+  margin-left: -120%;                      /* Ajuste horizontal */
+  border: none;                            /* Sin borde */
+  border-radius: 20px 0 0 20px;           /* Bordes redondeados a la izquierda */
+  font-size: 16px;                         /* Tamaño de fuente */
+  width: 100%;                             /* Ancho completo */
+  outline: none;                           /* Sin contorno al enfocar */
 }
 
+/* ===== BOTÓN DE BÚSQUEDA ===== */
 .search-btn {
-  background-color: white;
-  color: black;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 0 20px 20px 0;
-  cursor: pointer;
-  font-size: 16px;
+  background-color: white;                /* Fondo blanco */
+  color: black;                           /* Texto negro */
+  border: none;                            /* Sin borde */
+  padding: 10px 15px;                     /* Espaciado interno */
+  border-radius: 0 20px 20px 0;           /* Bordes redondeados a la derecha */
+  cursor: pointer;                        /* Cursor pointer */
+  font-size: 16px;                        /* Tamaño de fuente */
 }
 
+/* ===== HOVER BOTÓN BÚSQUEDA ===== */
 .search-btn:hover {
-  background-color: #ccc;
+  background-color: #ccc;                 /* Fondo gris claro al pasar cursor */
 }
 
-/* Resultados del buscador */
+/* ===== RESULTADOS DEL BUSCADOR ===== */
 .resultados-busqueda {
-  position: absolute;
-  top: 45px;
-  right: 0;
-  width: 350px;
-  background-color: #222;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  max-height: 300px;
-  overflow-y: auto;
-  display: none;
-  z-index: 1000;
+  position: absolute;                     /* Posición absoluta respecto al contenedor */
+  top: 45px;                               /* Debajo del input */
+  right: 0;                                /* Alineado a la derecha */
+  width: 350px;                            /* Ancho fijo */
+  background-color: #222;                  /* Fondo gris oscuro */
+  border-radius: 8px;                      /* Bordes redondeados */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra */
+  max-height: 300px;                       /* Altura máxima */
+  overflow-y: auto;                        /* Scroll vertical si hay contenido */
+  display: none;                           /* Oculto por defecto */
+  z-index: 1000;                           /* Prioridad sobre otros elementos */
 }
 
+/* ===== ITEM DE RESULTADO ===== */
 .resultado-item {
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  display: flex;                           /* Usar flexbox */
+  align-items: center;                     /* Alinear verticalmente */
+  padding: 10px;                           /* Espaciado interno */
+  color: white;                            /* Texto blanco */
+  cursor: pointer;                         /* Cursor pointer */
+  transition: background-color 0.3s;       /* Transición suave al hover */
 }
 
+/* ===== IMAGEN DEL ITEM DE RESULTADO ===== */
 .resultado-item img {
-  width: 40px;
-  height: 60px;
-  object-fit: cover;
-  border-radius: 5px;
-  margin-right: 10px;
+  width: 40px;                              /* Ancho de la imagen */
+  height: 60px;                             /* Alto de la imagen */
+  object-fit: cover;                        /* Ajuste de imagen */
+  border-radius: 5px;                       /* Bordes redondeados */
+  margin-right: 10px;                       /* Separación con el texto */
 }
 
+/* ===== HOVER ITEM DE RESULTADO ===== */
 .resultado-item:hover {
-  background-color: #444;
+  background-color: #444;                   /* Fondo gris al pasar cursor */
 }
 
-/* Responsive Header para teléfonos */
+/* ===== RESPONSIVE HEADER PARA TELÉFONOS ===== */
 @media (max-width: 480px) {
   .header {
-    flex-direction: column;
-    align-items: stretch;
-    padding: 10px;
-    gap: 10px;
+    flex-direction: column;                 /* Elementos en columna */
+    align-items: stretch;                   /* Estirar elementos */
+    padding: 10px;                          /* Espaciado interno reducido */
+    gap: 10px;                              /* Separación vertical */
   }
 
   .left-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+    display: flex;                          /* Flexbox */
+    justify-content: space-between;         /* Separar elementos */
+    align-items: center;                     /* Centrado vertical */
+    width: 100%;                             /* Ancho completo */
   }
 
   .logo {
-    max-width: 120px;
+    max-width: 120px;                        /* Ajuste del logo */
   }
 
   .dropdown {
-    position: static;
+    position: static;                        /* Dropdown no absoluto */
   }
 
   .dropbtn {
-    font-size: 14px;
-    padding: 8px 16px;
+    font-size: 14px;                          /* Tamaño fuente reducido */
+    padding: 8px 16px;                        /* Ajuste padding */
   }
 
   .right-header {
-    width: 100%;
-    justify-content: center;
+    width: 100%;                               /* Ancho completo */
+    justify-content: center;                   /* Centrado horizontal */
   }
 
   .search-container {
-    width: 100%;
-    position: relative;
+    width: 100%;                               /* Ancho completo */
+    position: relative;                        /* Posición relativa para botón */
   }
 
   #searchInput {
-    width: 100%;
-    padding: 10px 40px 10px 15px;
-    margin-left: 0;
-    border-radius: 20px;
+    width: 100%;                               /* Ancho completo */
+    padding: 10px 40px 10px 15px;             /* Ajuste padding */
+    margin-left: 0;                             /* Elimina margin negativo */
+    border-radius: 20px;                        /* Bordes redondeados completos */
   }
 
   .search-btn {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    font-size: 18px;
-    padding: 0;
+    position: absolute;                        /* Posición absoluta */
+    right: 10px;                               /* Alineado a la derecha */
+    top: 50%;                                   /* Centrado vertical */
+    transform: translateY(-50%);               /* Ajuste perfecto al centro */
+    background: none;                           /* Sin fondo */
+    font-size: 18px;                            /* Tamaño fuente */
+    padding: 0;                                 /* Sin padding */
   }
 
   .linea-blanca {
-    margin-top: 15px;
+    margin-top: 15px;                           /* Ajuste de separación en mobile */
   }
 }
 
-/* Responsive Header para tablets */
+/* ===== RESPONSIVE HEADER PARA TABLETS ===== */
 @media (min-width: 481px) and (max-width: 1024px) {
   .header {
-    padding: 12px 15px;
-    gap: 10px;
+    padding: 12px 15px;                        /* Ajuste padding */
+    gap: 10px;                                 /* Separación entre elementos */
   }
 
   .logo {
-    max-width: 130px;
+    max-width: 130px;                           /* Ajuste del logo */
   }
 
   .dropbtn {
-    padding: 8px 16px;
-    font-size: 15px;
+    padding: 8px 16px;                          /* Ajuste padding */
+    font-size: 15px;                            /* Tamaño fuente */
   }
 
   .search-container {
-    max-width: 300px;
+    max-width: 300px;                            /* Ancho máximo del buscador */
   }
 
   #searchInput {
-    margin-left: -60%;
-    font-size: 15px;
+    margin-left: -60%;                           /* Ajuste margin para tablets */
+    font-size: 15px;                             /* Tamaño fuente */
   }
 
   .linea-blanca {
-    margin-top: 90px;
+    margin-top: 90px;                             /* Ajuste separación debajo del header */
   }
 }
-

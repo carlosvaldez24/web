@@ -1,0 +1,454 @@
+/* Estilo general */
+body {
+  margin: 0;
+  font-family: 'Baloo 2', sans-serif;
+  background-color: #000;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  padding: 8px 10%;
+}   
+
+.logo {
+  width: 20%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Línea blanca debajo del header */
+.linea-blanca {
+  height: 2px;
+  background-color: white;
+  width: 100%;
+  margin-top: 1%;
+  position: relative;
+}
+
+/* Botones */
+.btn {
+  padding: 8px 16px;
+  background-color: #000;
+  color: white;
+  border: 2px solid white;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: white;
+  color: #000;
+}
+
+/* Sección principal */
+.main {
+  text-align: center;
+  padding: 40px 10%;
+}
+
+.main h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.main p {
+  font-size: 20px;
+}
+
+/* Carrusel */
+.slider-container {
+  position: relative;
+  width: 80%;
+  max-width: 900px;
+  margin: 30px auto;
+  overflow: hidden;
+  height: 300px;
+  border-radius: 12px;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+.slider-track img {
+  width: 100%;
+  flex-shrink: 0;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Botones del carrusel */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  font-size: 28px;
+  padding: 12px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+  user-select: none;
+}
+
+.slider-btn.left {
+  left: 10px;
+}
+
+.slider-btn.right {
+  right: 10px;
+}
+
+/* Testimonios */
+.testimonials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 40px 10%;
+  gap: 20px;
+}
+
+.testimonial {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: #1e1e1e;
+  border: 2px solid #f1eaeb;
+  padding: 20px;
+  border-radius: 10px;
+  width: 320px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.testimonial-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.testimonial blockquote {
+  font-style: italic;
+  margin: 0;
+  font-size: 18px;
+  color: #ddd;
+}
+
+.testimonial footer {
+  text-align: right;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* Imagen final */
+.imagen-final {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.imagen-final img {
+  width: 60%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+/* ===== Estilos para centrar el carrusel de libros ===== */
+.seccion-libros {
+  padding: 40px 20px;
+  background-color: black;
+  color: white;
+  margin-top: 5%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.seccion-libros h2 {
+  font-size: 24px;
+  margin-left: 10px;
+  margin-bottom: 15px;
+  border-left: 5px solid white;
+  padding-left: 10px;
+}
+
+.libros-carrusel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.contenedor-libros {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 15px;
+  padding: 10px 0;
+  scrollbar-width: none;
+  justify-content: center;
+}
+
+.contenedor-libros::-webkit-scrollbar {
+  display: none;
+}
+
+.libro {
+  flex: 0 0 auto;
+  width: 140px;
+  text-align: center;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.libro img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+.libro p {
+  margin-top: 5px;
+  font-size: 14px;
+  color: white;
+}
+
+.libro:hover {
+  transform: scale(1.05);
+}
+
+.flecha {
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 2;
+  position: absolute;
+  top: 40%;
+  user-select: none;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.flecha:hover {
+  background: rgba(255, 255, 255, 0.8);
+  color: black;
+}
+
+.izquierda {
+  left: 0;
+}
+
+.derecha {
+  right: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .libro {
+    width: 120px;
+  }
+
+  .libro img {
+    height: 180px;
+  }
+
+  .seccion-libros h2 {
+    font-size: 20px;
+  }
+
+  /* 🔹 Ajuste del carrusel en móviles medianos */
+  .contenedor-libros {
+    justify-content: flex-start;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .libro {
+    width: 100px;
+  }
+
+  .libro img {
+    height: 150px;
+  }
+
+  .seccion-libros {
+    padding: 20px 10px;
+  }
+
+  /* 🔹 Ajuste extra en móviles pequeños */
+  .contenedor-libros {
+    gap: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+/* Responsive general */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .nav-buttons {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .logo {
+    width: 150px;
+  }
+
+  .main h2 {
+    font-size: 24px;
+  }
+
+  .main p {
+    font-size: 16px;
+  }
+
+  .slider-container {
+    width: 90%;
+    height: 220px;
+  }
+
+  .slider-track img {
+    height: 220px;
+  }
+
+  .testimonial {
+    width: 90%;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .testimonial-img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    width: 120px;
+  }
+
+  .testimonial {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .testimonial-img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+  }
+
+  .imagen-final img {
+    width: 90%;
+  }
+}
+
+
+/* ====== PORTADA (SPLASH) ====== */
+body.no-scroll {
+  overflow: hidden;
+}
+
+#portada {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  z-index: 9999;            /* por encima de todo */
+  opacity: 1;
+  transition: opacity 1s ease;
+  overflow: hidden;
+}
+
+#estrellas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  object-fit: cover;   /* se adapta sin deformarse */
+}
+
+#logo {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 10px;
+}
+
+#logo img {
+  width: clamp(180px, 25vw, 420px);  /* más flexible */
+  max-width: 90%;
+  height: auto;
+  opacity: 0;
+  transform: scale(0.8);
+  animation: ib_fadeInScale 2s ease forwards;
+}
+
+@keyframes ib_fadeInScale {
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* ====== RESPONSIVE ====== */
+
+/* Para pantallas muy pequeñas (móviles en vertical) */
+@media (max-width: 480px) {
+  #logo img {
+    width: 70%; /* que ocupe más espacio en móviles */
+  }
+}
+
+/* Tablets y pantallas medianas */
+@media (min-width: 481px) and (max-width: 768px) {
+  #logo img {
+    width: 50%;
+  }
+}
+
+/* Laptops y pantallas grandes */
+@media (min-width: 1024px) {
+  #logo img {
+    width: clamp(300px, 20vw, 500px);
+  }
+}
